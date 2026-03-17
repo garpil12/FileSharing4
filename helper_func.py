@@ -1,9 +1,3 @@
-# (©)Codexbotz
-# Recife By Zaen @Mafia_Tobatz
-# Recode By Dappa @mahadappa
-# Kalo clone Gak usah hapus 
-# gue tandain akun tele nya ngentod
-
 import asyncio
 import base64
 import re
@@ -24,6 +18,10 @@ async def is_subscribed(filter, client, update):
         return True
     if not FORCE_SUB_CHANNEL4:   
         return True
+    if not FORCE_SUB_CHANNEL5:   
+        return True
+    if not FORCE_SUB_CHANNEL6:   
+        return True    
     user_id = update.from_user.id
     if user_id in ADMINS:
         return True
@@ -31,7 +29,9 @@ async def is_subscribed(filter, client, update):
         member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL1, user_id=user_id)
         member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
         member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL3, user_id=user_id)  
-        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL4, user_id=user_id)  
+        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL4, user_id=user_id)    
+        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL5, user_id=user_id)   
+        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL6, user_id=user_id)  
     except UserNotParticipant:
         return False
 
@@ -46,7 +46,7 @@ async def encode(string):
 
 async def decode(base64_string):
     base64_string = base64_string.strip("=") # links generated before this commit will be having = sign, hence striping them to handle padding errors.
-    base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
+    base64_bytes = (base64_string + "=" * (-len(base64_string) % 6)).encode("ascii")
     string_bytes = base64.urlsafe_b64decode(base64_bytes) 
     string = string_bytes.decode("ascii")
     return string

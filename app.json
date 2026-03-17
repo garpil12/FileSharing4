@@ -1,13 +1,11 @@
 {
-  "name": "ReyyFileSharing4",
+  "name": "GarfieldFsub",
   "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
   "keywords": [
     "telegram",
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/ReyyNada/Reyy-XFsub-Bot5",
-  "logo": "https://telegra.ph/file/4541a63f5fbb976dd7313.jpg",
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Masukan Bot token, Dapatkan dari t.me/BotFather",

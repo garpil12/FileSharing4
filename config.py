@@ -1,9 +1,3 @@
-# (©)Codexbotz
-# Recode By Dappa @mahadappa
-# Kalo clone Gak usah hapus 
-# gue tandain akun tele nya ngentod
-
-
 import logging
 import os
 from logging.handlers import RotatingFileHandler
@@ -24,7 +18,7 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "@Mafia_Tobatz")
+OWNER = os.environ.get("OWNER", "@Brsik23")
 
 # Database
 DB_URI = os.environ.get("DATABASE_URL", "")
@@ -38,8 +32,9 @@ FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "0"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
 FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "0"))
 FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))
-
-TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+FORCE_SUB_CHANNEL5 = int(os.environ.get("FORCE_SUB_CHANNEL5", "0"))
+FORCE_SUB_CHANNEL6 = int(os.environ.get("FORCE_SUB_CHANNEL6", "0"))
+TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "6"))
 
 # Pesan Awalan /start
 START_MSG = os.environ.get(
@@ -64,12 +59,11 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == "True"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1250450587)
-ADMINS.append(844432220)
-ADMINS.append(1750080384)
-ADMINS.append(851754691)
+ADMINS.append(919303395)
+ADMINS.append(5674665043)
 
-LOG_FILE_NAME = "filesharingbot.txt"
+
+LOG_FILE_NAME = "fsub.txt"
 
 logging.basicConfig(
     level=logging.INFO,

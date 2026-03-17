@@ -1,9 +1,3 @@
-# (©)Codexbotz
-# Recode By @Mafia_Tobatz
-# Kalo clone Gak usah hapus 
-# gue tandain akun tele nya ngentod
-
-
 import asyncio
 
 from pyrogram.errors import FloodWait

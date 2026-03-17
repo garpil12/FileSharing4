@@ -1,10 +1,3 @@
-# (©)Codexbotz
-# Recode By Zaen @Mafia_Tobatz
-# Recode By Dappa @mahadappa
-# Kalo clone Gak usah hapus 
-# gue tandain akun tele nya ngentod
-
-
 import asyncio
 from datetime import datetime
 from time import time
